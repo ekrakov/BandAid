@@ -1,0 +1,534 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../1Dfinite/">
+      
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.3">
+    
+    
+      
+        <title>Introduction to bands - BandAid</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.d7758b05.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/custom.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-bands" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="BandAid" class="md-header__button md-logo" aria-label="BandAid" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            BandAid
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction to bands
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  What is band structure
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../1D-full%20solution/" class="md-tabs__link">
+        
+  
+    
+  
+  1D full solution
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../1Dfinite/" class="md-tabs__link">
+        
+  
+    
+  
+  1D example
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    <li class="md-tabs__item md-tabs__item--active">
+      <a href="./" class="md-tabs__link">
+        
+  
+    
+  
+  Introduction to bands
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="BandAid" class="md-nav__button md-logo" aria-label="BandAid" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    BandAid
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    What is band structure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1D-full%20solution/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1D full solution
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1Dfinite/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    1D example
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Introduction to bands
+    
+  </span>
+  
+
+      </a>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="introduction-to-bands">Introduction to bands</h1>
+<h1 id="free-particle-solution">Free particle solution</h1>
+<h2 id="blochs-theorem">Bloch's theorem</h2>
+<p>Our lattice is periodic under translation by a lattice vector <span class="arithmatex">\(\bR\)</span>. While it is not immediately clear how this will play into our final solution, it is helpful to start by introducing a translation operator <span class="arithmatex">\(\That\)</span> such that </p>
+<div class="arithmatex">\[
+    \That \psi(\br)=\psi(\br+\bR)
+\]</div>
+<p>The eigenspectrum of this operator seems a little easier to understand than that of <span class="arithmatex">\(\Hhat\)</span>. Because our lattice is periodic in <span class="arithmatex">\(\bR\)</span>, implying <span class="arithmatex">\(\Hhat(\br + \bR) = \Hhat(\br)\)</span>, we can show that the operators <span class="arithmatex">\(\That\)</span> and <span class="arithmatex">\(\Hhat\)</span> commute:</p>
+<div class="arithmatex">\[
+    \That\Hhat(\br)\psi(\br) = \Hhat(\br + \bR)\psi(\br + \bR) = \Hhat(\br)\That\psi(\br)
+\]</div>
+<p>By a well-known property, showing that <span class="arithmatex">\(\That\)</span> and <span class="arithmatex">\(\Hhat\)</span> commute under periodicity <span class="arithmatex">\(\bR\)</span> implies that they share a common set of eigenfunctions. Finding the eigenfunctions of <span class="arithmatex">\(\That\)</span> then equates to solving for the eigenfunctions of <span class="arithmatex">\(\Hhat\)</span>, a powerful simplification.</p>
+<p>We now wish to determine the form of the eigenfunctions of <span class="arithmatex">\(\That\)</span>. For example, eigenfunctions of eigenvalue <span class="arithmatex">\(\lambda=1\)</span> are totally periodic in <span class="arithmatex">\(\bR\)</span>, such that <span class="arithmatex">\(f(\br)\)</span>  does not change when translated by <span class="arithmatex">\(\bR\)</span>:</p>
+<div class="arithmatex">\[
+\That f(\br)=f(\br+\bR)=f(\br)
+\]</div>
+<p>More generally, consider a function that is not trivially periodic but  satisfies <span class="arithmatex">\(\psi(\br+\bR)=\lambda \psi(\br)\)</span>. This behavior is well described by an exponential, but because we are describing a quantum system, it has to be an exponential that is normalizable, i.e., a complex exponential of the form <span class="arithmatex">\(\psi = e^{i\bk\cdot\br}\)</span>. We apply <span class="arithmatex">\(\That\)</span> to find its eigenvalue: </p>
+<div class="arithmatex">\[
+   \That e^{i\bk\cdot\br} = e^{i(\bk \cdot \br + \bk \cdot \bR)} = 
+\underbrace{e^{i \bk \cdot \bR}}_{\lambda} e^{i \bk \cdot \br}
+\]</div>
+<p>Our final eigenstate <span class="arithmatex">\(\psi\)</span> can be either periodic or of the form of the complex exponential. In general, any eigenfunction of <span class="arithmatex">\(\That\)</span> can be written</p>
+<div class="arithmatex">\[
+    \psi(\br)=e^{i\bk \cdot \br}f(\br)
+\]</div>
+<p>%
+where once again, <span class="arithmatex">\(f(\br) = f(\br + \bR)\)</span>, and <span class="arithmatex">\(e^{i\bk \cdot \br}\)</span> is a consequence of the translational invariance of the system. As before, we can find the eigenvalue:</p>
+<div class="arithmatex">\[
+    \That \psi(\br) = e^{i \bk \cdot \bR} e^{i \bk \cdot \br} f(\br+\bR)=e^{i \bk \cdot \bR} e^{i \bk \cdot \br} f(\br)
+\]</div>
+<p>Now we reiterate that the eigenfunction <span class="arithmatex">\(\psi\)</span> also belongs to <span class="arithmatex">\(\Hhat\)</span>---we've exploited the commutativity of the two operators to find a solution for our periodic system simply by considering <span class="arithmatex">\(\That\)</span>. This is Bloch's theorem. These so-called \textit{Bloch waves} can be written in full as</p>
+<div class="arithmatex">\[
+\psi_{n\bk}(\br)=e^{i \bk \cdot \br} f_{n\bk}(\br)
+\]</div>
+<!-- https://ekrakov-bandaid.streamlit.app/?embed_options=show_toolbar,light_theme,show_colored_line -->
+
+<!-- <iframe src="https://ekrakov-bandaid.streamlit.app/?embed=true" width="100%" height="600px" style="border:none;"></iframe> -->
+
+<iframe src="https://ekrakov-bandaid.streamlit.app/?embed=true&embed_options=show_toolbar"
+        style="width: 90%; height: 85vh; border: none;"></iframe>
+
+<!-- <!-- 
+<div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+  <iframe id="streamlit-iframe" 
+          src="https://ekrakov-bandaid.streamlit.app/?embed=true&embed_options=show_toolbar"
+          style="width: 90%; height: 95vh; border: none;"></iframe>
+</div>
+
+<script>
+  window.onload = function() {
+    var iframe = document.getElementById("streamlit-iframe");
+    iframe.style.height = window.innerHeight * 0.95 + "px";  // 95% of viewport height
+  };
+</script> -->
+
+<!-- 
+
+
+<div style="width: 100%; display: flex; justify-content: center; align-items: center;">
+  <iframe id="streamlit-iframe" 
+          src="https://ekrakov-bandaid.streamlit.app/?embed=true&embed_options=show_toolbar"
+          style="width: 90%; height: 95vh; border: none;"></iframe>
+</div>
+
+<script>
+  window.onload = function() {
+    var iframe = document.getElementById("streamlit-iframe");
+    setTimeout(function() {
+      iframe.src = iframe.src;  // Reload iframe to trigger proper toolbar loading
+    }, 1000);
+  };
+</script> -->
+<p>--&gt;</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f1b6f286.min.js"></script>
+      
+        <script src="../js/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
