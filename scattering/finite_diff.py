@@ -18,6 +18,17 @@ class PotentialFunctions:
         """
         return l*(l+1)/self.x**2 - 2/self.x
 
+    def muffintin(self, l):
+        """
+        Radial potential peacewise
+        - For r < 30: V(r) = l(l+1)/r^2 - 2/r
+        - For r >= 30: V(r) = l(l+1)/r^2 + 0
+        """
+        centrifugal_term = l * (l + 1) / self.x**2
+        pw_potentail = np.where(self.x < 30, -2 / self.x, 0)
+
+        return centrifugal_term + pw_potentail
+
     def Infsquare(self):
         """
         Infinite square well 
@@ -57,6 +68,7 @@ def plot_eigenstates(x, eigenvectors, eigenvalues, title, xlabel, ylabel):
     for i, vec in enumerate(eigenvectors):
 
         plt.plot(x, vec, label=f'{eigenvalues[i]:.3f}  eV')
+    plt.axvline(x=30, color='black', linestyle='--', label=r'$R_{\mathrm{mt}}$')
     plt.title(title, fontsize=30)
     plt.xlabel(xlabel, fontsize=25)
     plt.ylabel(ylabel, fontsize=25)
@@ -76,7 +88,7 @@ def main(l):
     E0 = 13.6  # Energy conversion factor
     # Parameters
     n_grid = 10000  # number of grid points 
-    l_max = 300 # maximum length
+    l_max = 150 # maximum length
 
     # Create x values
     x_values = np.linspace(0.00001, l_max, n_grid)
@@ -86,15 +98,20 @@ def main(l):
     potential_obj = PotentialFunctions(x_values)
     # radial_potential = potential_obj.radial(l)
     radial_potential = potential_obj.radial(l)
+    
+    muffin_tin = potential_obj.muffintin(l)
+
 
 
     # Compute eigenvalues and eigenvectors
-    eigenvalues, eigenvectors = finite_diff(delta, radial_potential)
+    # eigenvalues, eigenvectors = finite_diff(delta, radial_potential)
+    eigenvalues, eigenvectors = finite_diff(delta, muffin_tin)
+
     eigenvalues = np.sort(eigenvalues)
 
     # Plot the results
     plot_eigenstates(x_values[1:-1], eigenvectors.T[:3], eigenvalues[:3] *E0 ,
-                     'Eigenstates for (l={})'.format(str(l)), '$x/a_0$', '$\psi(r)$')
+                     'Eigenstates for (l={})'.format(str(l)), '$x/a_0$', '$u(r)$')
 
     # Display the first few eigenvalues
     for i in range(12):
